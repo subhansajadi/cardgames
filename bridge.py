@@ -8,9 +8,7 @@ def bridge_score(suit, level, vul, dbl, made):
     mul = {'X': 2, 'XX': 4}.get(dbl, 1)
     score, bonus = 0, 0
 
-    # Add up the values of individual tricks.
     for trick in range(1, made+1):
-        # Raw points for this trick.
         if suit == 'clubs' or suit == 'diamonds':
             pts = 20
         elif suit == 'hearts' or suit == 'spades':
